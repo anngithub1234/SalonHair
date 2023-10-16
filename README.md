@@ -22,6 +22,7 @@ Introducing our state-of-the-art Hair Studio system, a seamless fusion of CRM an
 **Website Features for Customers:**
 
 Create an account on the website.
+
 Robust user authentication and secure login mechanisms to ensure the safety.
 A user-friendly interface for seamless browsing.
 Search for a variety of hair and beauty services.
