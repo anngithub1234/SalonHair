@@ -6,23 +6,20 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Interfaces](#interfaces)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Licence](#licence)
-- [Documentations](#documentations)
+- [Technologies Used](#technologies-used)
+- [License](#license)
+- [Documentation](#documentation)
 
 ## Introduction
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Introducing our state-of-the-art Hair Studio system, a seamless fusion of CRM and E-commerce designed for salons. Elevate your salon experience with effortless appointment bookings, product shopping, staying connected with your favorite stylists and a world of beauty at your fingertips. Experience the future of salon services with us!
 
 ## Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Interfaces
 
 ## Prerequisites
 
@@ -33,25 +30,54 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - MySQL
   
 ## Installation
+1. Clone the repository
+   ```bash
+   https://github.com/anngithub1234/SalonHair.git
+   ```
+2. Install dependencies
+   ```bash
+   composer install
+   npm install
+   npm run dev
+   ```
+3. Configure environment variables
+   ```bash
+   cp .env.example .env
+   ```
+4. Run Migrations
+   ```bash
+   php artisan migrate
+   ``
+5. Serve the application
+   ```bash
+   php artisan serve
+   ```
+6. Run the build
+   ```bash
+   npm run dev
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Technologies Used
 
-## Usage
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Licence
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Frameworks: Laravel, 
+- JavaScript Framework: Alpine.js
+- CSS Framework: Tailwind CSS
+- Application Scaffolding: Laravel Jetstream
+- Libraries: Livewire, Chart.js
+- Languages: PHP, JavaScript
+- Database: MySQL
+- Testing email functionality: MailTrap
 
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Documentation
-Laravel
-Tailwind CSS
-Alpine.js
-Laravel Mix
-jetstream
-Livewire
+
+- [Hair Studio](docs/sample.pdf)
+- [Laravel](https://laravel.com/docs/8.x)
+- [Tailwind CSS](https://tailwindcss.com/docs/installation)
+- [Alpine.js](https://alpinejs.dev/)
+- [jetstream](https://jetstream.laravel.com/introduction.html)
+- [Livewire](https://laravel-livewire.com/docs/2.x/quickstart)
+- [MailTrap](https://mailtrap.io/)
