@@ -21,42 +21,47 @@ Introducing our state-of-the-art Hair Studio system, a seamless fusion of CRM an
 
 **Website Features for Customers:**
 
-Create an account on the website.
-
-Robust user authentication and secure login mechanisms to ensure the safety.
-A user-friendly interface for seamless browsing.
-Search for a variety of hair and beauty services.
-View detailed information about each service.
-Browse seasonal offers and discounts.
-View service details, including pricing and duration.
-Add bookings and reserve a preferred time slot.
-Make secure online payments for services.
-Leave reviews and ratings for services.
-Subscribe to the salon newsletter for updates and promotions.
+- Create an account on the website.
+- Robust user authentication and secure login mechanisms to ensure the safety.
+- A user-friendly interface for seamless browsing.
+- Search for a variety of hair and beauty services.
+- View detailed information about each service.
+- Browse seasonal offers and discounts.
+- View service details, including pricing and duration.
+- Add bookings and reserve a preferred time slot.
+- Make secure online payments for services.
+- Leave reviews and ratings for services.
+- Subscribe to the salon newsletter for updates and promotions.
 
 **CRM Features for Admin and Staff:**
 
 *Admin User Special Feature:*
 
-Create and manage user accounts for both staff and customers.
+- Create and manage user accounts for both staff and customers.
 
 *Admin and Staff Shared Features:*
 
-Manage the website, including adding, updating, and deleting services.
-A user-friendly interface.
-Access and view customer reviews and ratings.
-Collect and maintain customer contact details and allergies for personalized service.
-Maintain a record of stylists, their schedules, and availability.
-Manage products and inventory used for various services.
-Create and send newsletters to customers.
-Access analytics data, including:
-Number of registered users.
-Most booked services.
-Monthly revenue reports.
-Representation of customer reviews and ratings.
-Identify the most booked stylist for staffing optimization.
+- Manage the website, including adding, updating, and deleting services.
+- A user-friendly interface.
+- Access and view customer reviews and ratings.
+- Collect and maintain customer contact details and allergies for personalized service.
+- Maintain a record of stylists, their schedules, and availability.
+- Manage products and inventory used for various services.
+- Create and send newsletters to customers.
+- Access analytics data, including:
+- Number of registered users.
+- Most booked services.
+- Monthly revenue reports.
+- Representation of customer reviews and ratings.
+- Identify the most booked stylist for staffing optimization.
 
 ## Interfaces
+
+![WhatsApp Image 2023-10-16 at 20 33 55](https://github.com/anngithub1234/SalonHair/assets/107624745/c23c1928-7923-4c74-9bda-6a1e9007c3ad)
+
+![WhatsApp Image 2023-10-16 at 20 33 55 (2)](https://github.com/anngithub1234/SalonHair/assets/107624745/8cc35565-1412-4cec-a41c-b0726181f9f0)
+
+
 
 ## Prerequisites
 
