@@ -19,11 +19,47 @@ Introducing our state-of-the-art Hair Studio system, a seamless fusion of CRM an
 
 ## Features
 
+**Website Features for Customers:**
+
+Create an account on the website.
+Robust user authentication and secure login mechanisms to ensure the safety.
+A user-friendly interface for seamless browsing.
+Search for a variety of hair and beauty services.
+View detailed information about each service.
+Browse seasonal offers and discounts.
+View service details, including pricing and duration.
+Add bookings and reserve a preferred time slot.
+Make secure online payments for services.
+Leave reviews and ratings for services.
+Subscribe to the salon newsletter for updates and promotions.
+
+**CRM Features for Admin and Staff:**
+
+*Admin User Special Feature:*
+
+Create and manage user accounts for both staff and customers.
+
+*Admin and Staff Shared Features:*
+
+Manage the website, including adding, updating, and deleting services.
+A user-friendly interface.
+Access and view customer reviews and ratings.
+Collect and maintain customer contact details and allergies for personalized service.
+Maintain a record of stylists, their schedules, and availability.
+Manage products and inventory used for various services.
+Create and send newsletters to customers.
+Access analytics data, including:
+Number of registered users.
+Most booked services.
+Monthly revenue reports.
+Representation of customer reviews and ratings.
+Identify the most booked stylist for staffing optimization.
+
 ## Interfaces
 
 ## Prerequisites
 
-- PHP 7.4 or higher
+- PHP 8 or higher
 - Composer
 - Node.js
 - NPM
@@ -74,9 +110,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Documentation
 
-- [Hair Studio][ssp.pdf](https://github.com/anngithub1234/SalonHair/files/12917901/ssp.pdf)
-
-
+- [Hair Studio](https://github.com/anngithub1234/SalonHair/files/12917901/ssp.pdf)
 - [Laravel](https://laravel.com/docs/8.x)
 - [Tailwind CSS](https://tailwindcss.com/docs/installation)
 - [Alpine.js](https://alpinejs.dev/)
