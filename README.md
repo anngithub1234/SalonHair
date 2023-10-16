@@ -47,7 +47,7 @@ Introducing our state-of-the-art Hair Studio system, a seamless fusion of CRM an
 4. Run Migrations
    ```bash
    php artisan migrate
-   ``
+   ```
 5. Serve the application
    ```bash
    php artisan serve
@@ -74,7 +74,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Documentation
 
-- [Hair Studio](docs/sample.pdf)
+- [Hair Studio](doc/ssp.pdf)[Uploading ssp.pdf…]()
+
 - [Laravel](https://laravel.com/docs/8.x)
 - [Tailwind CSS](https://tailwindcss.com/docs/installation)
 - [Alpine.js](https://alpinejs.dev/)
