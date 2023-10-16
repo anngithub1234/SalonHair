@@ -74,7 +74,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Documentation
 
-- [Hair Studio](doc/ssp.pdf)[Uploading ssp.pdf…]()
+- [Hair Studio][ssp.pdf](https://github.com/anngithub1234/SalonHair/files/12917901/ssp.pdf)
+
 
 - [Laravel](https://laravel.com/docs/8.x)
 - [Tailwind CSS](https://tailwindcss.com/docs/installation)
