@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
+use App\Models\CartFunction;
 use App\Models\Item;
 use App\Models\Review;
 use App\Models\service;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -17,10 +20,25 @@ class homecontroller extends Controller
         $data=User::get();
         $service=service::get();
         $reviews=Review::get();
-        
+        $cart = Cart::get();
+        $checkout=CartFunction::get();
+        $now = Carbon::now();
+        $startOfMonth = $now->startOfMonth();
+    $endOfMonth = $now->endOfMonth();
+    $orderDirection = request()->input('order', 'asc');
+    
+        // Calculate monthly revenue
+        $monthlyRevenue = CartFunction::selectRaw('YEAR(created_at) year, MONTH(created_at) month, SUM(total_cost) total')
+            ->groupBy('year', 'month')
+            ->orderBy('year', $orderDirection)
+            ->orderBy('month', $orderDirection)
+            ->get();
+
+    $totalMonthlyRevenue = CartFunction::whereBetween('created_at', [$startOfMonth, $endOfMonth])
+        ->sum('total_cost');
         if($role=='1'){
             
-            return view('admin',compact('data','service','reviews'));
+            return view('admin',compact('data','service','reviews','cart','checkout','totalMonthlyRevenue','monthlyRevenue', 'orderDirection'));
         }elseif($role=='2'){
             return view('staff');
         }else{

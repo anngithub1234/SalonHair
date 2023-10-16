@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CartFuntionController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\homecontroller;
 use App\Http\Controllers\ItemController;
@@ -74,9 +77,11 @@ Route::resource('/item', ItemController::class);
 Route::get('/Sub', [NewsletterController::class, 'index'])->name('subscribe');
 Route::post('/subcribe', [NewsletterController::class, 'subscribe']);
 Route::resource('review', ReviewController::class);
-
-
-
+Route::resource('/addtoCart', CartController::class);
+Route::get('/goToCart', [CartFuntionController::class, 'index'])->name('goToCart.index');
+Route::delete('/goToCart', [CartFuntionController::class, 'destroy'])->name('goToCart.destroy');
+Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
+Route::view('/thank-you', 'thank-you'); 
 
 
 

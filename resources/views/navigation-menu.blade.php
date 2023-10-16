@@ -26,6 +26,9 @@
                   <x-nav-link href="{{ route('review.create') }}" :active="request()->routeIs('review.create')">
                     {{ __('Feedback') }}
                 </x-nav-link>
+                <x-nav-link href="{{ route('goToCart.index') }}" :active="request()->routeIs('goToCart')">
+                    {{ __('Cart') }}
+                </x-nav-link>
                   @endif
                 </div>
             </div>

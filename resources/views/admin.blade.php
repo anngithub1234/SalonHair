@@ -98,6 +98,60 @@
 
                     </div>
 
+                    <div class="bg-orange-100 p-4 rounded-md">
+                        <div class="flex items-center justify-between">
+                        <h1 class="text-gray-500 text-lg font-semibold pb-1">Most Added Items</h1></div>
+                        <div class="bg-gradient-to-r from-cyan-300 to-cyan-500 h-px mb-6"></div>
+                        @if ($cart->isEmpty())
+                            <div class="text-gray-600">The cart is empty or all items have a count of 0.</div>
+                        @else
+                            @php
+                                $maxItemCount = $cart->max('item_count');
+                                $mostAddedItems = $cart->where('item_count', $maxItemCount);
+                            @endphp
+                    
+                            @foreach ($mostAddedItems as $mostAddedItem)
+                                <div class="p-3 rounded-lg mb-2">
+                                    <h1 class="">{{ $mostAddedItem->item_name }}</h1>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
+
+                @php
+                    $total = 0; // Initialize the total variable
+                @endphp
+                
+                @foreach ($checkout as $ch)
+                    @php
+                        $total += $ch->total_cost; // Add each checkout's total_cost to the total
+                    @endphp
+                @endforeach
+                
+                
+                
+                @php
+    $totalRevenue = 0; // Initialize the total revenue variable
+    $totalItemCount = 0; // Initialize the total item count variable
+@endphp
+
+@foreach ($checkout as $ch)
+    @php
+        $totalRevenue += $ch->total_cost; // Accumulate the total revenue
+        $totalItemCount += $ch->item_count; // Accumulate the total item count
+    @endphp
+@endforeach
+<div class="bg-blue-100 p-4 rounded-md">
+<h1>Total Monthly Revenue: ${{ $totalRevenue }}</h1>
+</div>
+<div class="bg-yellow-100 p-4 rounded-md">
+<h1>Total Sells Count: {{ $totalItemCount }}</h1>
+</div>
+
+                   
+                
+                    
+
                     <!-- Sección 2 - Gráfica de Comercios -->
                     <div class="bg-green-100 p-4 rounded-md">
                         <h2 class="text-gray-500 text-lg font-semibold pb-1">Reviews</h2>
@@ -248,6 +302,62 @@
     </table>
    
     
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2 p-2 ">
+        <canvas class="  " id="revenueChart" width="200" height="100"></canvas>
+        
+        
+        
+        <script>
+            // Function to create and render the chart
+            function createRevenueChart() {
+                // Get the monthly revenue data from PHP variable
+                var monthlyRevenueData = @json($monthlyRevenue);
+        
+                // Get the canvas element
+                var ctx = document.getElementById('revenueChart').getContext('2d');
+        
+                // Extract months and revenue data
+                var months = monthlyRevenueData.map(function(item) {
+                    return item.month + '/' + item.year;
+                });
+        
+                var revenue = monthlyRevenueData.map(function(item) {
+                    return item.total;
+                });
+        
+                // Create the chart
+                var myChart = new Chart(ctx, {
+                    type: 'bar', // You can use 'bar' or any other chart type you prefer
+                    data: {
+                        labels: months,
+                        datasets: [{
+                            label: 'Monthly Revenue',
+                            data: revenue,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)', // Change the color as needed
+                            borderColor: 'rgba(75, 192, 192, 1)', // Change the color as needed
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Revenue'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        
+            // Attach the chart creation function to the window.onload event
+            window.onload = function() {
+                createRevenueChart();
+            };
+        </script>
+        </div>
 </div>
                 </div>
             </div>
@@ -304,6 +414,10 @@
         sideNav.classList.toggle('hidden'); // Agrega o quita la clase 'hidden' para mostrar u ocultar la navegación lateral
     });
 </script>
+
+
+
 </body>
 </html>
+
 </x-app-layout>

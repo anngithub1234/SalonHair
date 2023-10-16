@@ -11,10 +11,10 @@
         <a href="#" style="position: absolute; bottom: 150px; left: 250px; background-color: #000; color: #fff; padding: 8px 16px;   border-radius: 20px; text-decoration: none;">Make an Appointment</a>
       </div>
       
-      
-      @foreach ($items as $item)
+      <div class="flex">
+ @foreach ($items as $item)
   
-      <div class="w-full p-8 rounded lg:w-1/4">
+      <div class="w-full p-8 rounded lg:w-1/4 ">
        <img src={{ $item->image }}
            alt="image" style="height: 170px"  class="w-full object-cover rounded-lg">
            <div class="flex row" style="justify-content: space-between;">
@@ -22,10 +22,24 @@
             <p>Price: ${{ $item->item_price }}</p>
         </div>
         <br>
-           <a href="#" style="background-color: #000; color: #fff; padding: 8px 16px;   border-radius: 20px; text-decoration: none;">Add To Cart</a>
+        <form action="/addtoCart" method="post" class="flex gap-2 justify-center text-center">
+          @csrf
+  
+          <input class="border-2" type="number" name="item_count" value="1" min="1">
+          <input type="hidden" name="item_name" value="{{ $item->item_name }}">
+          <input type="hidden" name="item_price" value="{{ $item->item_price }}">
+          <button type="submit" class="flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+              </svg>
+          </button>
+      </form>
+          
        </div>
    
      @endforeach
+      </div>
+     
   
       <div class=" p-8  "> <h1><center>EXCLUSIVE SERVICES</h1></div>
         <div class="container flex flex-wrap mx-auto">

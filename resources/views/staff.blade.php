@@ -1,6 +1,4 @@
 <x-app-layout>
-
-
 <!-- component -->
 <!DOCTYPE html>
 <html lang="es">
@@ -28,14 +26,14 @@
     <!-- Contenido principal -->
     <div class="flex-1 flex">
         <!-- Barra lateral de navegación (oculta en dispositivos pequeños) -->
-        <div class="p-2 bg-white w-60 flex flex-col hidden md:flex" id="sideNav">
+        <div class="p-2 bg-white w-60 flex flex-col md:flex" id="sideNav">
             <nav>
               <h1>
                 <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-black  hover:text-white" href="#">
                   <i class="fas fa-home mr-2"></i>Reports
               </a>
                 <a href="{{ route('contact.index') }}" class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-hover:bg-black hover:text-white" href="#">
-                    <i class="fas fa-file mr-2"></i>Item Management
+                    <i class="fas fa-file mr-2"></i>Customer Management
                 </a>
                 <a href="{{ route('item.index') }}" class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-black hover:text-white" href="#">
                     <i class="fas fa-file-alt mr-2"></i>New Item Management
@@ -49,10 +47,7 @@
               
             </nav >
 
-            <!-- Ítem de Cerrar Sesión -->
-            <a class="block text-gray-500 py-2.5 px-4 my-2 rounded transition duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-cyan-300 hover:text-white mt-auto" href="#">
-                <i class="fas fa-sign-out-alt mr-2"></i>Cerrar sesión
-            </a>
+     
 
             <!-- Señalador de ubicación -->
             <div class="bg-gradient-to-r from-cyan-300 to-cyan-500 h-px mt-2"></div>
@@ -69,7 +64,7 @@
 
             <!-- Contenedor de las 4 secciones (disminuido para dispositivos pequeños) -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2 p-2">
-                <!-- Sección 1 - Gráfica de Usuarios (disminuida para dispositivos
+                <!-- Sección 1 - Gráfica de Usuarios (disminuida para dispositivos-->
             
                 <!-- Sección 1 - Gráfica de Usuarios -->
                     <div class="bg-white p-4 rounded-md">
@@ -150,25 +145,25 @@
 
                 <!-- Sección 4 - Tabla de Transacciones (disminuida para dispositivos pequeños) -->
                      <div class="bg-white p-4 rounded-md mt-4">
-    <h2 class="text-gray-500 text-lg font-semibold pb-4">Transacciones</h2>
+    <h2 class="text-gray-500 text-lg font-semibold pb-4">Transactions</h2>
     <div class="my-1"></div> <!-- Espacio de separación -->
     <div class="bg-gradient-to-r from-cyan-300 to-cyan-500 h-px mb-6"></div> <!-- Línea con gradiente -->
     <table class="w-full table-auto text-sm">
         <thead>
             <tr class="text-sm leading-normal">
-                <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light">Nombre</th>
-                <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light">Fecha</th>
-                <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light text-right">Monto</th>
+                <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light">service</th>
+                <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light">Date</th>
+                <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light text-right">Price</th>
             </tr>
         </thead>
         <tbody>
             <tr class="hover:bg-grey-lighter">
-                <td class="py-2 px-4 border-b border-grey-light">Carlos Sánchez</td>
+                <td class="py-2 px-4 border-b border-grey-light">Bob cut</td>
                 <td class="py-2 px-4 border-b border-grey-light">27/07/2023</td>
                 <td class="py-2 px-4 border-b border-grey-light text-right">$1500</td>
             </tr>
             <tr class="hover:bg-grey-lighter">
-                <td class="py-2 px-4 border-b border-grey-light">Ana Torres</td>
+                <td class="py-2 px-4 border-b border-grey-light">nail</td>
                 <td class="py-2 px-4 border-b border-grey-light">28/07/2023</td>
                 <td class="py-2 px-4 border-b border-grey-light text-right">$2000</td>
             </tr>
